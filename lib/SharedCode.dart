@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class SharedCodes {
 
   static String Host = 'api.adminmateripintar.com';
-  static String apiFile = 'https://adminmateripintar.com/resources';
-  static String apiResource = 'https://adminmateripintar.com/resources';
+  static String apiFile = 'https://localhost/resources';
+  static String apiResource = 'https://localhost/resources';
   static String apiUrl = 'http://$Host';
   static String apiMapel = '${apiUrl}/mapel';
   static String apiMateri = '${apiUrl}/materi';
