@@ -1,16 +1,9 @@
-# retech
 
-A new Flutter project.
+# ReTech
+Aplikasi Mobile yang menyediakan jasa servis elektronik alat rumah tangga.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tim Pukis Cokelat 
+Husler : Rahma Aisyah 
+Hipster : Daniyal Arshaq Sudrajad 
+Hacker ( FrontEnd ) : Rizqie Ahmad Zakaria Hende 
+Hacker ( BackEnd ) : Reza Indra Maulana
