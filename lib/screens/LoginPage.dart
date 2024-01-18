@@ -138,7 +138,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     style: ElevatedButton.styleFrom(backgroundColor: SharedCodes.primary),
                     onPressed: () {
-                      startLogin();
+                      if (username == "User" && password == "123") {
+                        Navigator.push(
+                          context, MaterialPageRoute(builder: (_) => HomePage()));
+                      }
+                      // startLogin();
                     },
                   ),
                 ),

@@ -49,7 +49,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Color.fromARGB(255, 151, 0, 208),
+          color: Colors.white,
           width: double.infinity,
           child: Padding(
             padding: const EdgeInsets.all(50.0),
@@ -58,18 +58,31 @@ class _RegisterPageState extends State<RegisterPage> {
               children: [
                 Spacer(),
                 Text(
-                  'Buat Akun',
+                  'Register',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 25),
+                      color: Colors.black,
+                      fontSize: 40),
                 ),
                 SizedBox(
                   height: 25,
                 ),
-                Text(
-                  'Silahkan masuk untuk melanjutkan',
-                  style: TextStyle(color: Colors.white),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    text: 'Dengan mendaftar, Anda menyetujui',
+                    style: TextStyle(color: Colors.black),
+                    /*defining default style is optional */
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: ' syarat dan ketentuan',
+                          style: TextStyle(color: Color.fromARGB(255, 194, 75, 57),
+                            fontWeight: FontWeight.bold)),
+                      TextSpan(
+                          text: ' kami',
+                          style: TextStyle(color: Colors.black)),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 50,
@@ -85,12 +98,14 @@ class _RegisterPageState extends State<RegisterPage> {
                   cursorColor: Colors.white,
                   decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
+                          borderSide: BorderSide(color: Colors.grey)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
-                      border: OutlineInputBorder(),
-                      labelText: 'Username',
-                      labelStyle: TextStyle(color: Colors.white)),
+                          borderSide: BorderSide(color: Colors.grey)),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5)
+                      ),
+                      labelText: 'Nama',
+                      labelStyle: TextStyle(color: Colors.grey)),
                 ),
                 SizedBox(
                   height: 10,
@@ -106,12 +121,12 @@ class _RegisterPageState extends State<RegisterPage> {
                   cursorColor: Colors.white,
                   decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
+                          borderSide: BorderSide(color: Colors.grey)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
+                          borderSide: BorderSide(color: Colors.grey)),
                       border: OutlineInputBorder(),
                       labelText: 'Email',
-                      labelStyle: TextStyle(color: Colors.white)),
+                      labelStyle: TextStyle(color: Colors.grey)),
                 ),
                 SizedBox(
                   height: 10,
@@ -125,33 +140,15 @@ class _RegisterPageState extends State<RegisterPage> {
                   cursorColor: Colors.white,
                   decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
+                          borderSide: BorderSide(color: Colors.grey)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
+                          borderSide: BorderSide(color: Colors.grey)),
                       border: OutlineInputBorder(),
                       labelText: 'Password',
-                      labelStyle: TextStyle(color: Colors.white)),
+                      labelStyle: TextStyle(color: Colors.grey)),
                 ),
                 SizedBox(
                   height: 10,
-                ),
-                TextField(
-                  controller: _fullname,
-                  onChanged: (value) {
-                    fullname = value;
-                  },
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  cursorColor: Colors.white,
-                  decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white)),
-                      border: OutlineInputBorder(),
-                      labelText: 'Full Name',
-                      labelStyle: TextStyle(color: Colors.white)),
                 ),
                 SizedBox(
                   height: 25,
@@ -162,10 +159,11 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: ElevatedButton(
                     child: const Text(
                       'Daftar',
-                      style:
-                          TextStyle(color: Color.fromARGB(255, 125, 54, 254)),
+                      style: TextStyle(color: Colors.white),
                     ),
-                    style: ElevatedButton.styleFrom(primary: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color.fromARGB(255, 194, 75, 57),
+                    ),
                     onPressed: () async {
                       postData();
                       showAlertDialog(context);
@@ -178,8 +176,10 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: [
                     Text(
                       'Sudah Punya Akun?',
-                      style:
-                          TextStyle(color: Color.fromARGB(179, 255, 255, 255)),
+                      style: TextStyle(
+                        color: Colors.black,
+                        
+                      ),
                     ),
                     TextButton(
                         onPressed: () {
@@ -191,7 +191,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         },
                         child: Text(
                           'Masuk',
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Color.fromARGB(255, 194, 75, 57)),
                         )),
                   ],
                 )
@@ -200,6 +200,7 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
         ),
       ),
+      
     );
   }
 

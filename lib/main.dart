@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mapins',
+      title: 'ReTech',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       home: OnboardingScreeen()
